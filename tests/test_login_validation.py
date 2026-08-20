@@ -2,7 +2,8 @@ import pytest
 
 from utilities.file_reader import read_csv
 
-
+@pytest.mark.smoke
+@pytest.mark.regression
 def test_login_page_loads(home_page, login_page) -> None:
     home_page.open()
     home_page.go_to_login()
