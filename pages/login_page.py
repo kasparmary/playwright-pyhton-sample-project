@@ -1,7 +1,7 @@
 from __future__ import annotations
 
-import re
 from playwright.sync_api import Page, expect
+
 
 class LoginPage:
     def __init__(self, page: Page) -> None:

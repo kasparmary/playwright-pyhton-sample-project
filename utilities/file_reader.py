@@ -5,6 +5,7 @@ from typing import Any
 
 import yaml
 from dotenv import load_dotenv
+
 load_dotenv()
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]

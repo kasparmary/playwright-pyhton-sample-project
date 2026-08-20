@@ -1,14 +1,13 @@
 from __future__ import annotations
-from itertools import product
 
-from playwright.sync_api import Page, expect
+from playwright.sync_api import Page
+
 
 class CartPage:
     def __init__(self, page: Page) -> None:
         self.page = page
         self.cart_link = page.get_by_role("link", name="Cart")
         self.view_full_cart_items = page.get_by_role("link", name="here")
-        # self.add_cart = page.locator('//*[@class="productinfo text-center"]/p[text()=\'Blue Top\'][1]')        
         # self.add_tocart = page.get_by_text("Add to cart").nth(1)
         # self.product_overlay = page.locator(".product-overlay")
         self.view_cart_link = page.get_by_role("link", name="View Cart")

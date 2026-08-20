@@ -1,7 +1,5 @@
-import pytest
 
 # from pages.home_page import HomePage
-from utilities.file_reader import read_csv
 from playwright.sync_api import Page
 
 

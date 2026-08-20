@@ -4,8 +4,8 @@ import pytest
 
 from pages.cart_page import CartPage
 from pages.home_page import HomePage
-from pages.login_page import LoginPage
 from pages.landing_page import LandingPage
+from pages.login_page import LoginPage
 from utilities.file_reader import CONFIG
 
 
