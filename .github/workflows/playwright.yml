@@ -3,6 +3,7 @@ name: UI Automation
 on:
   push:
   pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: read
