@@ -15,7 +15,6 @@ class CartPage:
         self.product = page.locator(".product-image-wrapper").filter(has_text="Blue Top")
         self.product_sub = self.product.locator("a.add-to-cart")
 
-
     def navigate_to_cart(self) -> None:
         self.cart_link.click()
 

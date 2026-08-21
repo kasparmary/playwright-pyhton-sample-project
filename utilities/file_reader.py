@@ -17,6 +17,7 @@ def _resolve_path(relative_path: str | Path) -> Path:
         return path
     return PROJECT_ROOT / path
 
+
 def read_csv(test_file: str | Path) -> list[dict[str, str]]:
     name = Path(test_file).stem
     relative_path = Path(CONFIG["test_data"]["dir"]) / f"{name}.csv"
@@ -27,6 +28,7 @@ def read_csv(test_file: str | Path) -> list[dict[str, str]]:
         data = list(csv.DictReader(file))
     return data or []
 
+
 def read_yaml(relative_path: str | Path) -> dict[str, Any]:
     path = _resolve_path(relative_path)
     if not path.exists():
@@ -34,6 +36,7 @@ def read_yaml(relative_path: str | Path) -> dict[str, Any]:
     with path.open("r", encoding="utf-8") as file:
         data = yaml.safe_load(file)
     return data or {}
+
 
 _env = os.getenv("ENV", "qa")
 CONFIG = read_yaml(f"config/config_{_env}.yaml")

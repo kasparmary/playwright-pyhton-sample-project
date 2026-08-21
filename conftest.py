@@ -15,7 +15,7 @@ def home_page(page) -> HomePage:
 
 
 def pytest_addoption(parser):
-    parser.addoption("--enable-tracing",action="store_true",help="Enable Playwright tracing")
+    parser.addoption("--enable-tracing", action="store_true", help="Enable Playwright tracing")
 
 
 @pytest.fixture(autouse=True)
@@ -32,13 +32,16 @@ def trace_test(context, request):
         trace_dir.mkdir(exist_ok=True)
         context.tracing.stop(path=str(trace_dir / f"{request.node.name}.zip"))
 
+
 @pytest.fixture
 def cart_page(page) -> CartPage:
     return CartPage(page)
 
+
 @pytest.fixture
 def login_page(page) -> LoginPage:
     return LoginPage(page)
+
 
 @pytest.fixture
 def landing_page(page) -> LandingPage:

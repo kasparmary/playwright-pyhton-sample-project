@@ -21,6 +21,3 @@ def test_login_validation(home_page, login_page, landing_page, credentials: dict
         landing_page.verify_logged_in(credentials["expected_message"])
     else:
         login_page.verify_login_error(credentials["expected_message"])
-
-
-
